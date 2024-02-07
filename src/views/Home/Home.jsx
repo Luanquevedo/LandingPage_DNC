@@ -1,4 +1,5 @@
 import React from 'react'
+import './index.scss'
 import Header from '../../components/header/Header'
 import Info from '../../components/info/info'
 import Video from '../../components/video/Video'
