@@ -1,0 +1,53 @@
+@use '../../sass/variables' as *;
+
+.carrosel {
+  background-color: $secondaryColor;
+  padding: 70px;
+  position: relative;
+
+  &__cards {
+    display: flex;
+    flex-direction: row;
+    gap: 110px;
+  }
+
+  .prev,
+  .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 18px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+
+  .prev {
+    left: 20px;
+  }
+
+  .next {
+    right: 20px;
+  }
+
+  @media screen and (max-width: 768px) {
+    .prev {
+        left: 20px;
+      }
+    
+      .next {
+        right: -5px;
+      }
+
+    &__cards {
+      gap: 200px; 
+    }
+
+    &__img {
+      flex: 1 0 100%; 
+      max-width: 100%; 
+    }
+  }
+}

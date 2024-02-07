@@ -1,0 +1,56 @@
+@use '../../sass/variables' as *;
+
+.header{
+    display: flex;
+    flex-direction: column;
+    background-image: url(background.svg);
+    color: $principalColor;
+    font-family: $principalFont;
+
+    h1{
+        font-size: 40px;
+        font-weight: 400;
+    }
+
+    p{
+        font-size: 20px;
+        font-weight: 400;
+        margin-top: 20px;
+    }
+
+    &__logo{
+        width: 125px;
+        margin-top: 55px;
+        margin-left: 55px;
+    }
+
+    &__informatinaltext{
+        margin-left: 175px;
+        margin-top: 90px;
+        margin-bottom: 150px;
+    }
+
+    @media screen and (max-width: 768px) {
+        &__logo{
+            width: 90px;
+            margin-top: 25px;
+            margin-left: 25px;
+        }
+
+        &__informatinaltext{
+            margin: 5%;
+            margin-top: 70px;
+            margin-bottom: 150px;
+        }
+
+        h1 {
+          font-size: 180%;
+        }
+    
+        p {
+          font-size: 115%;
+        }
+      }
+}
+
+

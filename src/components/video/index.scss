@@ -1,0 +1,56 @@
+@use '../../sass/variables' as *;
+
+.section {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 70px;
+    margin-bottom: 40px;
+
+    &__Text {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        margin-top: 25px;
+        
+        h1 {
+            font-size: 32px;
+            color: $secondaryColor;
+            font-weight: 700;        
+        }
+
+        p {
+            font-size: 16px;
+            font-weight: 400;
+        }
+        iframe {
+            width: calc(100% );
+        }
+    }
+
+   
+
+    @media screen and (max-width: 768px) {
+        flex-direction: column; // Altera para empilhar os elementos verticalmente no modo responsivo
+    
+        &__Text {
+            align-items: center; // Centraliza o texto no modo responsivo
+            margin: 0px;
+            margin-left: 10px;
+        }
+    
+        h1 {
+            font-size: 22px; // Reduz o tamanho do título para dispositivos menores
+        }
+    
+        p {
+            font-size: 12px; // Reduz o tamanho do texto para dispositivos menores
+        }
+    
+        iframe {
+            width: calc(98% );
+            margin: 1%;
+        }
+    }
+    
+}
